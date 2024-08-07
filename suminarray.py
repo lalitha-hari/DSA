@@ -9,7 +9,7 @@ def hasArrayTwoCandidates(arr, x): # worst case
 
 
 
-#o(n) using two pointer theorem
+#o(nlogn) using two pointer theorem
 def hasArrayTwoCandidates(arr, x):
     arr.sort()  # Sort the array
     n = len(arr)
@@ -25,3 +25,12 @@ def hasArrayTwoCandidates(arr, x):
             l += 1
     
     return 0
+
+# O(n)
+def hasArrayTwoCandidates(arr,x):
+    new=set()
+    for i in arr:
+        if x-i in new:
+            return True
+        new.add(i)
+    return False

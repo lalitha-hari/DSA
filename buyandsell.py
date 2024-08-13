@@ -22,12 +22,9 @@ def maxProfit(n,price):
         buy = price[0]
         max_profit = 0
         for i in range(1, n):
-    
-
-            if (buy > price[i]):
+            if (buy > price[i]):# finding the lowest
                 buy = price[i]
     
-
             elif (price[i] - buy > max_profit):
                 max_profit = price[i] - buy
         return max_profit
